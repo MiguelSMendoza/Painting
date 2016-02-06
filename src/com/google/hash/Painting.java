@@ -11,14 +11,17 @@ public class Painting {
 	            Scanner input = new Scanner(file);
 	            int N = input.nextInt();
 	            int M = input.nextInt();
-	            
+	            input.nextLine();
 	            char[][] matrix = new char[N][M];
-	            System.out.println("N:"+N+" M:"+M);
-	            while (input.hasNextLine()) {
-	                String line = input.nextLine();
-	                System.out.println(line);
+	            for (int i=0;i<N;i++) {
+	            	String line = input.nextLine();
+	            	for(int j=0;j<M;j++) 
+	            		matrix[i][j] = line.charAt(j);
 	            }
 	            input.close();
+	            
+	            // Ya tenemos todo en matrix
+	            System.out.println("Solucion");
 
 	        } catch (Exception ex) {
 	            ex.printStackTrace();
